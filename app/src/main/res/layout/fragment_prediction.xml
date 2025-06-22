@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admissionprediction.PredictionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btn_toolbar_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_menu_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:tint="?attr/colorPrimary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prediction"
+            android:textSize="24sp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_centerInParent="true"
+            android:textColor="?android:attr/textColorPrimary"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/label_gre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GRE Score" android:layout_alignParentStart="true" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_gre_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(316)" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/slider_gre" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="260.0" android:valueTo="340.0" android:stepSize="1.0" android:value="316"/>
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:id="@+id/label_toefl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOEFL Score" android:layout_alignParentStart="true" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_toefl_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(107)" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/slider_toefl" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="80.0" android:valueTo="120.0" android:stepSize="1.0" android:value="107"/>
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:id="@+id/label_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="University Rating" android:layout_alignParentStart="true" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_rating_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(3)" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/slider_rating" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1.0" android:valueTo="5.0" android:stepSize="1.0" android:value="3"/>
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:id="@+id/label_sop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SOP Score" android:layout_alignParentStart="true" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_sop_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(3.5)" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/slider_sop" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1.0" android:valueTo="5.0" android:stepSize="0.5" android:value="3.5"/>
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:id="@+id/label_lor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOR Score" android:layout_alignParentStart="true" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_lor_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(3.5)" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/slider_lor" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1.0" android:valueTo="5.0" android:stepSize="0.5" android:value="3.5"/>
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:id="@+id/label_cgpa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CGPA (IPK)" android:layout_alignParentStart="true" android:layout_centerVertical="true"/>
+                <TextView android:id="@+id/tv_cgpa_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(8.58)" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/slider_cgpa" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="6.0" android:valueTo="10.0" android:stepSize="0.01" android:value="8.58"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_research"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Research Experience"
+                android:checked="true"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"/>
+
+            <Button
+                android:id="@+id/btn_predict"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Predict Admission Chance"
+                android:layout_marginTop="32dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_bold"
+                android:padding="12dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chance of Admission"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/tv_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-%"
+                        android:textSize="48sp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="?attr/colorPrimary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admissionprediction.ModelInfoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btn_toolbar_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_menu_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:tint="?attr/colorPrimary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Info Model"
+            android:textSize="22sp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_centerInParent="true"
+            android:textColor="?android:attr/textColorPrimary"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arsitektur Model"
+                android:textSize="20sp"
+                android:fontFamily="@font/lato_bold"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="24dp"
+                android:justificationMode="inter_word"
+                android:text="Model ini adalah Artificial Neural Network (ANN) yang dirancang untuk tugas regresi, yaitu memprediksi nilai kontinu 'Chance of Admit'. Arsitektur ini menggunakan dua lapisan tersembunyi (hidden layers) dengan fungsi aktivasi ReLU dan regularisasi L2 untuk mencegah overfitting. Lapisan output menggunakan aktivasi linear untuk menghasilkan nilai prediksi tunggal."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MODEL MACHINE LEARNING"
+                android:textSize="20sp"
+                android:fontFamily="@font/lato_bold"
+                android:layout_marginBottom="24dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center_horizontal">
+                    <View android:layout_width="24dp" android:layout_height="24dp" android:background="@drawable/ic_menu_feature"/>
+                    <View android:layout_width="2dp" android:layout_height="match_parent" android:background="?attr/colorPrimary"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pre-Processing" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="16dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1). Data Transform" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F0F0F0" android:layout_marginBottom="8dp">
+                        <TextView android:padding="12dp" android:fontFamily="monospace" android:textColor="#333333" android:text="encoder = LabelEncoder()\ndf_encoded['University Rating'] = encoder.fit_transform(df_encoded['University Rating'])" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </HorizontalScrollView>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:text="Kolom 'University Rating' yang bersifat kategorikal (1, 2, 3, 4, 5) diubah menjadi format numerik standar (0, 1, 2, 3, 4) menggunakan LabelEncoder." android:layout_marginBottom="16dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2). Label dan Fitur" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F0F0F0" android:layout_marginBottom="8dp">
+                        <TextView android:padding="12dp" android:fontFamily="monospace" android:textColor="#333333" android:text="x = df_encoded.drop(['Chance of Admit'], axis=1)\ny = df_encoded['Chance of Admit']" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </HorizontalScrollView>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:text="Dataset dipisahkan menjadi 'x' (fitur input) dan 'y' (target/label 'Chance of Admit' yang akan diprediksi)." android:layout_marginBottom="24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:gravity="center_horizontal">
+                    <View android:layout_width="24dp" android:layout_height="24dp" android:background="@drawable/ic_menu_model"/>
+                    <View android:layout_width="2dp" android:layout_height="match_parent" android:background="?attr/colorPrimary"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modeling" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="16dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1). Train Data Dan Standarisasi" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F0F0F0" android:layout_marginBottom="8dp">
+                        <TextView android:padding="12dp" android:fontFamily="monospace" android:textColor="#333333" android:text="x_train, x_test, ... = train_test_split(...)\nscaler = StandardScaler()\nx_train_scaled = scaler.fit_transform(x_train)\nx_test_scaled = scaler.transform(x_test)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </HorizontalScrollView>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:text="Data dibagi menjadi data latih dan uji. StandardScaler kemudian mempelajari parameter (mean, std dev) HANYA dari data latih dan menerapkannya ke data latih dan uji untuk menghindari kebocoran data." android:layout_marginBottom="16dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2). Modeling ANN" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F0F0F0" android:layout_marginBottom="8dp">
+                        <TextView android:padding="12dp" android:fontFamily="monospace" android:textColor="#333333" android:text="model_le = Sequential()\nmodel_le.add(Dense(128, activation='relu', ...))\nmodel_le.add(Dense(64, activation='relu', ...))\nmodel_le.add(Dense(1, activation='linear'))" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </HorizontalScrollView>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:text="Membangun arsitektur Neural Network dengan 2 lapisan tersembunyi (128 dan 64 neuron). Lapisan output memiliki 1 neuron dengan aktivasi 'linear', yang menandakan ini adalah model regresi untuk memprediksi nilai kontinu." android:layout_marginBottom="16dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3). Train Model" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F0F0F0" android:layout_marginBottom="8dp">
+                        <TextView android:padding="12dp" android:fontFamily="monospace" android:textColor="#333333" android:text="history_le = model_le.fit(...)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </HorizontalScrollView>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/lato_regular" android:text="Proses melatih model dengan data latih selama 300 epoch (siklus) untuk mempelajari pola dan hubungan antara fitur input dan target output." android:layout_marginBottom="24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

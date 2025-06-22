@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.example.admissionprediction.AboutAppFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btn_toolbar_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_menu_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:tint="?attr/colorPrimary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentang Aplikasi"
+            android:textSize="22sp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_centerInParent="true"
+            android:textColor="?android:attr/textColorPrimary"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Storyline"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_bold"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Proyek ini berada dalam domain Pendidikan Tinggi (Higher Education), dengan fokus pada proses Penerimaan Mahasiswa Pascasarjana (Graduate School Admissions). ini melibatkan analisis data calon mahasiswa untuk memprediksi kemungkinan mereka diterima di sebuah program studi. Data yang digunakan mencakup berbagai metrik kualitatif dan kuantitatif, seperti skor tes standar (GRE, TOEFL), Indeks Prestasi Kumulatif (IPK/CGPA), kualitas dokumen pendukung (SOP, LOR), dan pengalaman riset."
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_regular"
+                android:lineSpacingExtra="5dp"
+                android:justificationMode="inter_word"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dataset"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dataset diambil dari website Kaggle yang dibuat oleh Mukesh Manral dengan judul 'Graduates Admission Prediction'.\n\nLink: https://www.kaggle.com/datasets/mukeshmanral/graduates-admission-prediction"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_regular"
+                android:lineSpacingExtra="5dp"
+                android:autoLink="web"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cara Kerja Aplikasi"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aplikasi ini bekerja melalui beberapa tahap sederhana:\n\n1.  **Input Pengguna:** Anda memasukkan 7 metrik akademis melalui slider dan switch di halaman 'Prediksi'.\n\n2.  **Standarisasi Data:** Nilai-nilai input tersebut kemudian dinormalisasi menggunakan metode StandardScaler (dengan nilai mean dan standar deviasi yang sudah dihitung sebelumnya) agar formatnya sesuai dengan data yang digunakan saat melatih model.\n\n3.  **Proses Prediksi:** Data yang sudah terstandarisasi dimasukkan ke dalam model Machine Learning (.tflite) yang tertanam di aplikasi.\n\n4.  **Tampilan Hasil:** Model menghasilkan satu nilai prediksi (antara 0 dan 1) yang kemudian diubah menjadi format persentase dan ditampilkan kepada Anda sebagai 'Peluang Diterima'."
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_regular"
+                android:lineSpacingExtra="5dp"
+                android:justificationMode="inter_word"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Made by Sherly Debby"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

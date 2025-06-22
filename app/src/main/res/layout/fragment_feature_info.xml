@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admissionprediction.FeatureInfoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btn_toolbar_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_menu_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:tint="?attr/colorPrimary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi Fitur"
+            android:textSize="22sp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_centerInParent="true"
+            android:textColor="?android:attr/textColorPrimary"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1. GRE Score" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skor dari Graduate Record Examination, sebuah tes standar yang mengukur kemampuan verbal, kuantitatif, dan penulisan analitis calon mahasiswa pascasarjana." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Integer" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 260 - 340" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2. TOEFL Score" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skor dari Test of English as a Foreign Language, mengukur kemampuan berbahasa Inggris calon mahasiswa dari negara yang bahasa utamanya bukan Inggris." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Integer" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 80 - 120" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3. University Rating" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Peringkat atau prestise dari universitas sarjana calon mahasiswa, biasanya dalam skala 1 (terendah) hingga 5 (tertinggi)." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Integer" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 1 - 5" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4. SOP (Statement of Purpose)" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skor subjektif yang menilai kualitas esai 'Statement of Purpose' calon mahasiswa, dalam skala 1.0 hingga 5.0." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Float" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 1.0 - 5.0" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5. LOR (Letter of Recommendation)" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skor subjektif yang menilai kekuatan Surat Rekomendasi yang dimiliki calon mahasiswa, dalam skala 1.0 hingga 5.0." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Float" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 1.0 - 5.0" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6. CGPA (Cumulative Grade Point Average)" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Indeks Prestasi Kumulatif (IPK) selama studi sarjana, biasanya dalam skala hingga 10.0. Ini adalah salah satu indikator performa akademis terpenting." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Float" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 6.0 - 10.0" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7. Research" android:textSize="18sp" android:fontFamily="@font/lato_bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Indikator biner yang menunjukkan apakah calon mahasiswa memiliki pengalaman riset (1) atau tidak (0)." android:textSize="16sp" android:fontFamily="@font/lato_regular" android:lineSpacingExtra="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipe Data: Integer (Biner)" android:fontFamily="@font/lato_regular" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Input Nilai Numerik: 0 atau 1" android:fontFamily="@font/lato_regular"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

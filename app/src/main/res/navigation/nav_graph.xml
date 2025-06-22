@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.admissionprediction.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_halamanUtamaFragment"
+            app:destination="@id/halamanUtamaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/predictionFragment"
+        android:name="com.example.admissionprediction.PredictionFragment"
+        android:label="fragment_prediction"
+        tools:layout="@layout/fragment_prediction" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.example.admissionprediction.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/datasetInfoFragment"
+        android:name="com.example.admissionprediction.DatasetInfoFragment"
+        android:label="fragment_dataset_info"
+        tools:layout="@layout/fragment_dataset_info" />
+    <fragment
+        android:id="@+id/featureInfoFragment"
+        android:name="com.example.admissionprediction.FeatureInfoFragment"
+        android:label="fragment_feature_info"
+        tools:layout="@layout/fragment_feature_info" />
+    <fragment
+        android:id="@+id/halamanUtamaFragment"
+        android:name="com.example.admissionprediction.HalamanUtamaFragment"
+        android:label="fragment_halaman_utama"
+        tools:layout="@layout/fragment_halaman_utama" >
+        <action
+            android:id="@+id/action_halamanUtamaFragment_to_datasetInfoFragment"
+            app:destination="@id/datasetInfoFragment" />
+        <action
+            android:id="@+id/action_halamanUtamaFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_halamanUtamaFragment_to_predictionFragment"
+            app:destination="@id/predictionFragment" />
+        <action
+            android:id="@+id/action_halamanUtamaFragment_to_modelInfoFragment"
+            app:destination="@id/modelInfoFragment" />
+        <action
+            android:id="@+id/action_halamanUtamaFragment_to_featureInfoFragment"
+            app:destination="@id/featureInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modelInfoFragment"
+        android:name="com.example.admissionprediction.ModelInfoFragment"
+        android:label="fragment_model_info"
+        tools:layout="@layout/fragment_model_info" />
+</navigation>
